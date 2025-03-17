@@ -8,8 +8,7 @@ import {
   Poppins,
 } from "next/font/google";
 import "./globals.css";
-import Header from "@/shared/widgets/header";
-import Footer from "@/shared/widgets/footer";
+import Provider from "@/configs/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,9 +69,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${plus_jakarta_sans.variable} ${dm_sans.variable} ${inter.variable} ${poppins.variable} antialiased bg-[#00020D]`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
